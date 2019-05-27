@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.kang.demo.widget.EditTextActivity;
 import com.kang.demo.widget.TextViewActivity;
+import com.kang.demo.widget.TextViewURLSpanActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.mainActivity_tv_btn, R.id.mainActivity_et_btn})
+    @OnClick({R.id.mainActivity_tv_btn, R.id.mainActivity_et_btn, R.id.mainActivity_autoLink_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mainActivity_tv_btn:
@@ -35,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mainActivity_et_btn:
                 EditTextActivity.toEditTextActivity(this);
+                break;
+            case R.id.mainActivity_autoLink_btn:
+                TextViewURLSpanActivity.toTextViewURLSpanActivity(this);
                 break;
             default:
                 break;
