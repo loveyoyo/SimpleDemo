@@ -5,10 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.kang.demo.widget.ButtonActivity;
 import com.kang.demo.widget.EditTextActivity;
+import com.kang.demo.widget.ImageViewActivity;
+import com.kang.demo.widget.ListViewActivity;
 import com.kang.demo.widget.TextViewActivity;
 import com.kang.demo.widget.TextViewRotateActivity;
 import com.kang.demo.widget.TextViewURLSpanActivity;
+import com.kang.demo.widget.ViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.mainActivity_tv_btn, R.id.mainActivity_et_btn, R.id.mainActivity_autoLink_btn, R.id.mainActivity_rotate_btn})
+    @OnClick({R.id.mainActivity_tv_btn, R.id.mainActivity_et_btn, R.id.mainActivity_autoLink_btn,
+            R.id.mainActivity_rotate_btn, R.id.mainActivity_view_btn, R.id.mainActivity_button_btn,
+            R.id.mainActivity_imageView_btn,R.id.mainActivity_listView_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mainActivity_tv_btn:
@@ -42,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mainActivity_rotate_btn:
                 TextViewRotateActivity.toTextViewRotateActivity(this);
+                break;
+            case R.id.mainActivity_view_btn:
+                ViewActivity.toViewActivity(this);
+                break;
+            case R.id.mainActivity_button_btn:
+                ButtonActivity.toButtonActivity(this);
+                break;
+            case R.id.mainActivity_imageView_btn:
+                ImageViewActivity.toImageViewActivity(this);
+                break;
+            case R.id.mainActivity_listView_btn:
+                ListViewActivity.toListViewActivity(this);
                 break;
             default:
                 break;
