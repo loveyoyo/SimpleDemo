@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,6 +24,8 @@ public class AnimationActivity extends AppCompatActivity {
     Button mAnimationActivityAnimScaleBtn;
     @BindView(R.id.animationActivity_anim_translate_btn)
     Button mAnimationActivityAnimTranslateBtn;
+
+    DateUtils mDateUtils;
 
     public static void toAnimationActivity(Context context) {
         Intent intent = new Intent(context, AnimationActivity.class);

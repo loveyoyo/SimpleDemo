@@ -30,6 +30,8 @@ public class TextViewActivity extends AppCompatActivity {
     View mTextViewActivityV2;
     @BindView(R.id.textViewActivity_v3)
     View mTextViewActivityV3;
+    @BindView(R.id.textViewActivity_tv5)
+    TextView mTextViewActivityTv5;
 
     public static void toTextViewActivity(Context context) {
         Intent intent = new Intent(context, TextViewActivity.class);
@@ -47,6 +49,9 @@ public class TextViewActivity extends AppCompatActivity {
 
     private void initView() {
 //        mTextViewActivityTv1.setTex
+        String rawString = getResources().getString(R.string.textView_placeHolder);
+        String afterString = String.format(rawString,"无人生还","阿加莎·克里斯蒂",1234,108.2f);
+        mTextViewActivityTv5.setText(afterString);
     }
 
 

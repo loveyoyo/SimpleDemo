@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class AnimatorAlphaActivity extends AppCompatActivity {
-    
+
     @BindView(R.id.alphaAnimatorActivity_iv1)
     ImageView mAlphaAnimatorActivityIv1;
     @BindView(R.id.alphaAnimatorActivity_btn1)
