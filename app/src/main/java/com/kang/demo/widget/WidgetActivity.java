@@ -1,5 +1,6 @@
 package com.kang.demo.widget;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,6 +35,10 @@ public class WidgetActivity extends AppCompatActivity {
     @BindView(R.id.widgetActivity_progressBar_btn)
     Button mWidgetActivityProgressBarBtn;
 
+    Activity mActivity;
+    View mView;
+
+
     public static void toWidgetActivity(Context context){
         Intent intent = new Intent(context,WidgetActivity.class);
         context.startActivity(intent);
@@ -46,7 +51,10 @@ public class WidgetActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.widgetActivity_view_btn, R.id.widgetActivity_tv_btn, R.id.widgetActivity_et_btn, R.id.widgetActivity_autoLink_btn, R.id.widgetActivity_rotate_btn, R.id.widgetActivity_button_btn, R.id.widgetActivity_imageView_btn, R.id.widgetActivity_listView_btn, R.id.widgetActivity_progressBar_btn})
+    @OnClick({R.id.widgetActivity_view_btn, R.id.widgetActivity_tv_btn, R.id.widgetActivity_et_btn,
+            R.id.widgetActivity_autoLink_btn, R.id.widgetActivity_rotate_btn, R.id.widgetActivity_button_btn,
+            R.id.widgetActivity_imageView_btn, R.id.widgetActivity_listView_btn, R.id.widgetActivity_progressBar_btn,
+            R.id.widgetActivity_listViewSwipe_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.widgetActivity_view_btn:
@@ -75,6 +83,9 @@ public class WidgetActivity extends AppCompatActivity {
                 break;
             case R.id.widgetActivity_progressBar_btn:
                 ProgressBarActivity.toProgressBarActivity(this);
+                break;
+            case R.id.widgetActivity_listViewSwipe_btn:
+                ListViewSwipeActivity.toListViewSwipeActivity(this);
                 break;
             default:
                 break;
