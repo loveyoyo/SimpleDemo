@@ -5,8 +5,8 @@ package com.kang.demo.bean;
  * Description:
  */
 
-public class SecondBean {
+public class ThirdBean {
 
-    private int age;
+    private int thirdAge;
 
 }
