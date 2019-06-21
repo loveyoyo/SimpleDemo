@@ -54,7 +54,8 @@ public class WidgetActivity extends AppCompatActivity {
     @OnClick({R.id.widgetActivity_view_btn, R.id.widgetActivity_tv_btn, R.id.widgetActivity_et_btn,
             R.id.widgetActivity_autoLink_btn, R.id.widgetActivity_rotate_btn, R.id.widgetActivity_button_btn,
             R.id.widgetActivity_imageView_btn, R.id.widgetActivity_listView_btn, R.id.widgetActivity_progressBar_btn,
-            R.id.widgetActivity_listViewSwipe_btn})
+            R.id.widgetActivity_listViewSwipe_btn,R.id.widgetActivity_font_btn,R.id.widgetActivity_circleView_btn,
+            R.id.widgetActivity_circleProgressView_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.widgetActivity_view_btn:
@@ -86,6 +87,15 @@ public class WidgetActivity extends AppCompatActivity {
                 break;
             case R.id.widgetActivity_listViewSwipe_btn:
                 ListViewSwipeActivity.toListViewSwipeActivity(this);
+                break;
+            case R.id.widgetActivity_font_btn:
+                TextViewFontActivity.toTextViewFontActivity(this);
+                break;
+            case R.id.widgetActivity_circleView_btn:
+                CircleViewActivity.toCircleViewActivity(this);
+                break;
+            case R.id.widgetActivity_circleProgressView_btn:
+                CircleProgressActivity.toCircleProgressActivity(this);
                 break;
             default:
                 break;

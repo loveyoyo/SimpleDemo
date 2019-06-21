@@ -32,14 +32,17 @@ public class HardwareActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.hardwareActivity_brightness_btn, R.id.hardwareActivity_voice_btn})
+    @OnClick({R.id.hardwareActivity_brightness_btn,R.id.hardwareActivity_screenOnOrOff_btn, R.id.hardwareActivity_voice_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.hardwareActivity_brightness_btn:
                 ScreenBrightnessActivity.toScreenBrightnessActivity(this);
                 break;
+            case R.id.hardwareActivity_screenOnOrOff_btn:
+                ScreenOnOrOffActivity.toScreenOnOrOffActivity(this);
+                break;
             case R.id.hardwareActivity_voice_btn:
-
+                VoiceActivity.toVoiceActivity(this);
                 break;
             default:
                 break;
