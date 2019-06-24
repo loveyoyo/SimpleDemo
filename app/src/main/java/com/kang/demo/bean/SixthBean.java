@@ -9,4 +9,6 @@ public class SixthBean {
 
     private int sixthAge;
 
+    private String name;
+
 }
