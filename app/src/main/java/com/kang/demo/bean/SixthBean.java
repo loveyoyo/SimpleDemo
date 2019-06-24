@@ -11,4 +11,6 @@ public class SixthBean {
 
     private String name;
 
+    private int sex;
+
 }
